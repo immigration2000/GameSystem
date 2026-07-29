@@ -100,7 +100,15 @@ Content/
 > 형식: `### YYYY-MM-DD — <커밋 요약> (<커밋 해시>)` 아래에 변경 항목을 나열합니다.
 > 최신 항목이 위로 오도록 작성합니다.
 
-### 2026-07-29 — 초기 설정 (`2ef30d7`)
+### 2026-07-29 — Git LFS 설정 및 README 추가 (`18c8caf`, `4961288`)
+
+- `README.md` 추가 — 프로젝트 목표, 구조, 입력 매핑, 구현 현황, 변경 이력 문서화
+- `.gitattributes` 추가 — `.uasset` / `.umap` 및 이미지 · 모델 · 오디오 · 영상 에셋을 Git LFS 로 추적
+- `git lfs migrate import` 로 **기존 히스토리의 에셋 257개(약 170MB)를 LFS 로 이전**
+  - 초기 커밋(`2ef30d7`)이 재작성되어 `7435df7` 로 바뀜
+  - 이전 히스토리는 로컬 태그 `pre-lfs-backup` 에 백업해 둠
+
+### 2026-07-29 — 초기 설정 (`7435df7`, LFS 이전 전 `2ef30d7`)
 
 - Unreal Engine 5.7 Third Person 템플릿으로 프로젝트 생성 및 Git 저장소 초기화
 - 언리얼용 `.gitignore` 추가 (`Saved/`, `Intermediate/`, `DerivedDataCache/`, `Binaries/` 제외)
